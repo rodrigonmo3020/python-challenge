@@ -62,12 +62,16 @@ output_path = os.path.join('.','resultPybank.txt')
 
 
 with open(output_path, 'w') as my_file:
-    my_writer = csv.writer(my_file)
+    
+    my_file.write('Financial Analysis')
 
-    my_writer.write('Financial Analysis')
-    my_writer.write('Total Months: 86')
-    my_writer.write('Total Profits: $ 22564198')
-    my_writer.write('Average Change: $ 4448.127906976744')
-    my_writer.write('Greatest Increase in Profits: Aug-16($1862002)')    
-    my_writer.write('Greatest Decrease in Profits: Feb-14($-1825558)')
+    my_file.write('Total Months: 86')
+
+    my_file.write('Total Profits: $ 22564198')
+
+    my_file.write('Average Change: $ 4448.127906976744')
+
+    my_file.write('Greatest Increase in Profits: Aug-16($1862002)')    
+
+    my_file.write('Greatest Decrease in Profits: Feb-14($-1825558)')
 

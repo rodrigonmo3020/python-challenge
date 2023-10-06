@@ -54,11 +54,11 @@ output_path = os.path.join('.','resultPypoll.txt')
 
 
 with open(output_path, 'w') as my_file:
-    my_writer = csv.writer(my_file)
+    
 
-    my_writer.write('Election Results')
-    my_writer.write('Total Votes: 369711')
-    my_writer.write('Charles Casper Stockham: 23.049% (85213)')
-    my_writer.write('Diana DeGette: 73.812% (272892)')
-    my_writer.write('Raymon Anthony Doane: 3.139% (11606)')    
-    my_writer.write('Winner: Diana DeGette')
+    my_file.write('Election Results')
+    my_file.write('Total Votes: 369711')
+    my_file.write('Charles Casper Stockham: 23.049% (85213)')
+    my_file.write('Diana DeGette: 73.812% (272892)')
+    my_file.write('Raymon Anthony Doane: 3.139% (11606)')    
+    my_file.write('Winner: Diana DeGette')
