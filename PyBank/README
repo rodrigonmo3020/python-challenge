@@ -1,0 +1,5 @@
+#The scrip file main.py contains the main code for the Challenge 3 on which we applied some of the functions and methods of Python for reading CSV files and making the requested analysis to get to the results listed for the PyBank challenge. Also it cointains the code taht was created for writing and exporting the txt file: resultPybank.txt
+
+#Below the link to the repository from shrawantee that I reviewed for a bether idea about how tu use some of the functions of Python to use the List and the Loops to get to the results:
+# https://github.com/shrawantee/Python-PyBank-and-PyPoll/blob/master/HomeworkPython/PyBank/PyBank.py
+
