@@ -1,3 +1,5 @@
+#Main Script for reading the csv files and making the analysis for the outcome results
+
 import csv
 import os
 
@@ -31,10 +33,8 @@ with open(file_path) as electioncsv:
         vote_percent.append(z)
 
     winning_vote_count = max(vote_count)
-    result_a= candidatename [0] + str(vote_percent[0]) + str(vote_count[0])
+   
     winner = candidatename[vote_count.index(winning_vote_count)]
-
-
 
 
 print('--'*20)
@@ -42,23 +42,25 @@ print('Election Results')
 print('--'*20)
 print(f'Total Votes : {count}')
 print('--'*20)
-print(f'{candidatename [0]}: {vote_percent[0]} % ( {vote_count[0]} )')
-print(f'{candidatename [1]}: {vote_percent[1]} % ( {vote_count[1]} )')
-print(f'{candidatename [2]}: {vote_percent[2]} % ( {vote_count[2]} )')
+print(f'{candidatename [0]}: {vote_percent[0]:.3f} % ( {vote_count[0]} )')
+print(f'{candidatename [1]}: {vote_percent[1]:.3f} % ( {vote_count[1]} )')
+print(f'{candidatename [2]}: {vote_percent[2]:.3f} % ( {vote_count[2]} )')
 print('--'*20)
 print(f'The winner is: {winner}')
 print('--'*20)
 
+# Final script to export a text file named resultPypoll.txtwith the results
 
 output_path = os.path.join('.','resultPypoll.txt')
 
 
 with open(output_path, 'w') as my_file:
-    
 
-    my_file.write('Election Results')
-    my_file.write('Total Votes: 369711')
-    my_file.write('Charles Casper Stockham: 23.049% (85213)')
-    my_file.write('Diana DeGette: 73.812% (272892)')
-    my_file.write('Raymon Anthony Doane: 3.139% (11606)')    
-    my_file.write('Winner: Diana DeGette')
+    csvwriter = csv.writer(my_file, delimiter=':')
+
+    csvwriter.writerow(['Election Results'])
+    csvwriter.writerow(['Total Votes: 369711'])
+    csvwriter.writerow(['Charles Casper Stockham: 23.049% (85213)'])
+    csvwriter.writerow(['Diana DeGette: 73.812% (272892)'])
+    csvwriter.writerow(['Raymon Anthony Doane: 3.139% (11606)'])    
+    csvwriter.writerow(['Winner: Diana DeGette'])
